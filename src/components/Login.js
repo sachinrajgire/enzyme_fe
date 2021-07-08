@@ -5,7 +5,9 @@ class Login extends React.Component {
         super()
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            isSubmitted:"NO"
+
         }
     }
 
@@ -14,15 +16,28 @@ class Login extends React.Component {
             [event.target.name]: event.target.value
         })
     }
+
+    handleSubmit = (event) => {
+        console.log(event,'event');
+    //    alert('form submitted')
+    event.preventDefault()
+    this.setState({isSubmitted:"TRUE"})
+
+    }   
     
     render() {
         return (
             <form className='login'>
-                <label>Username</label>
+                <div id='isSubmitted'>
+                {this.state.isSubmitted}
+                </div>
+               
+                <label id='label_Username'>Username</label>
                 <input id='email' onBlur={this.handleInputChange} name='email' type='text' />
+                <label>Mylabel</label>
                 <label>Password</label>
                 <input id='password' onBlur={this.handleInputChange} name='password' type='password' />
-                <button>Submit</button>
+                <button id='submit' onClick={(e)=>this.handleSubmit(e)}>Submit</button>
             </form>
         )
     }
