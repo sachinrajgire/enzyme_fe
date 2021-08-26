@@ -80,34 +80,6 @@ describe('Testing Input Fields in Login Component', () => {
       })
 
 
-    it('should get the prop', () => {
-
-beforeEach(()=>{
-    
-})
-
-
-        const wrapper = shallow(<Login />);
-        wrapper.setState({
-            is
-        })
-        wrapper.setProps({})
-        // wrapper.find('#submit').simulate('click',{preventDefault:()=>{}})
-        // // console.log(wrap);
-        // let isSub = wrapper.find('#isSubmitted')
-        // expect(isSub.text()).toBe("TRUE")
-        // length 
-      })
-      
-    //   it('is expecting to have Alert on submit', ()=>{
-    //     const wrapper = shallow(<Login/>);
-    //     window.alert = jest.fn()
-    //     wrapper.find('button').simulate('click')
-    //     expect(window.alert).toHaveBeenCalledWith('form submitted')
-    // })
-
-
-
 
   })
 })
